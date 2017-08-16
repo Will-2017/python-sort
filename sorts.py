@@ -22,8 +22,9 @@ def prejudge(sort_func):
 
 # 插入排序：
 # 对比模型，原数组上排序
-# 优点：稳定
-# 缺点：慢（O(n^2)）
+# 时间复杂度：O(n^2)
+# 空间复杂度：O(n)
+# 稳定性：稳定
 @prejudge
 def insert_sort(seq):
     for i in range(1, len(seq)):
@@ -38,8 +39,9 @@ def insert_sort(seq):
 
 # 冒泡排序
 # 对比模型，原数组上排序
-# 优点：稳定
-# 缺点：慢（O(n^2)）
+# 时间复杂度：O(n^2)
+# 空间复杂度：O(1)
+# 稳定性：稳定
 @prejudge
 def bubble_sort(seq):
     for i in range(len(seq)):
@@ -51,8 +53,9 @@ def bubble_sort(seq):
 
 # 直接选择排序
 # 对比模型，原数组上排序
-# 优点：稳定
-# 缺点：慢（O(n^2)）
+# 时间复杂度：O(n^2)
+# 空间复杂度：O(1)
+# 稳定性：稳定
 @prejudge
 def select_sort(seq):
     for i in range(len(seq)):
@@ -66,8 +69,9 @@ def select_sort(seq):
 
 # 归并排序
 # 对比模型，非原数组上排序
-# 优点：稳定，速度较快（O(nlogn)）
-# 缺点：空间复杂度（O(n)）
+# 时间复杂度：O(nlog n)
+# 空间复杂度：O(n)
+# 稳定性：稳定
 @prejudge
 def merge_sort(seq):
     left = merge_sort(seq[:len(seq)//2])
@@ -91,7 +95,7 @@ def merge_sort(seq):
 
 # 快速排序
 # 对比模型，原数组上排序
-# 时间复杂度：最坏的情况O(n**2)
+# 时间复杂度：最坏的情况O(n^2)
 # 空间复杂度：O(log n)
 # 稳定性：不稳定
 def partition(seq, left, right, pivot_index):
